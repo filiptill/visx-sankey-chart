@@ -12,7 +12,7 @@ A customizable Sankey chart component built with **React**, **TypeScript**, **D3
 
 ## Demo
 
-Check out the live demo [here](https://your-demo-link.com) to see the Sankey chart in action.
+Check out the live demo [here](https://visx-sankey-chart.vercel.app/) to see the Sankey chart in action.
 
 ## Table of Contents
 

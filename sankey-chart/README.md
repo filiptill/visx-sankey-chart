@@ -1,46 +1,4 @@
-# Getting Started with Create React App
+“React Sankey Chart ================== A customizable Sankey chart component built with **React**, **TypeScript**, **D3**, and **Visx**. This project showcases how to create a flexible, interactive Sankey diagram for visualizing flow data. Features -------- * **Customizable**: Easily configure nodes, links, and styles to fit your use case. * **Interactive**: Hover over nodes or links to display detailed information. * **Responsive**: Automatically adjusts the chart size based on the screen dimensions. * **Built with Modern Tools**: Powered by React and TypeScript, leveraging D3's powerful layout engine and Visx's flexible rendering capabilities. Demo ---- Check out the live demo [here](https://your-demo-link.com) to see the Sankey chart in action. Table of Contents ----------------- * [Getting Started](#getting-started) * [Installation](#installation) * [Usage](#usage) * [Props](#props) * [Customization](#customization) * [Sample Data](#sample-data) * [Contributing](#contributing) * [License](#license) Getting Started --------------- Follow these instructions to get a copy of the project up and running on your local machine for development and testing purposes. ### Prerequisites Make sure you have **Node.js** and **npm** (or **yarn**) installed on your system. You can check the versions by running: bash Zkopírovat kód `node -v npm -v` ### Installation 1. Clone the repository: bash Zkopírovat kód `git clone https://github.com/your-username/react-sankey-chart.git` 2. Navigate to the project directory: bash Zkopírovat kód `cd react-sankey-chart` 3. Install the project dependencies: bash Zkopírovat kód `npm install` 4. Start the development server: bash Zkopírovat kód `npm start` This will open the project in your browser at `http://localhost:3000`. Usage ----- The `SankeyChart` component accepts customizable data and rendering options. Below is an example of how to use it in your project. ### Basic Example tsx Zkopírovat kód `import React from 'react'; import SankeyChart from './components/SankeyChart'; import { sampleData } from './data/sampleData'; const App: React.FC = () => { return ( <div> <h1>React Sankey Chart</h1> <SankeyChart data={sampleData} width={800} height={600} /> </div> ); }; export default App;` ### Props The `SankeyChart` component takes the following props: | Prop | Type | Description | | --- | --- | --- | | `data` | `SankeyGraph` | The data for the nodes and links in the Sankey diagram. | | `width` | `number` | The width of the SVG canvas. | | `height` | `number` | The height of the SVG canvas. | ### Customization You can customize the chart’s appearance by modifying the `fill`, `stroke`, and other SVG attributes for nodes and links. For example: tsx Zkopírovat kód `<SankeyChart data={sampleData} width={800} height={600} nodeColor="blue" linkColor="gray" />` You can further enhance the chart with tooltips, transitions, and more advanced D3 configurations. Sample Data ----------- Here’s an example of the data structure required by the Sankey chart: typescript Zkopírovat kód `export const sampleData = { nodes: [ { name: 'Source A' }, { name: 'Source B' }, { name: 'Target A' }, { name: 'Target B' } ], links: [ { source: 0, target: 2, value: 10 }, { source: 1, target: 3, value: 5 }, { source: 0, target: 3, value: 7 } ] };` ### Data Structure * **nodes**: An array of objects where each object represents a node (e.g., a source or target). * **links**: An array of objects where each object represents a link between two nodes. The `source` and `target` fields reference indices in the `nodes` array, while `value` represents the magnitude of the flow. Contributing ------------ We welcome contributions from the community. If you want to contribute: 1. Fork the repository. 2. Create a new branch for your feature or bug fix. 3. Submit a pull request with a detailed description of your changes. ### Setting Up the Dev Environment 1. Fork and clone the repository. 2. Install dependencies using `npm install`. 3. Make your changes in a new branch. 4. Test your changes thoroughly before submitting a pull request. License ------- This project is licensed under the MIT License - see the LICENSE file for details.”
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
 
-In the project directory, you can run:
-
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).

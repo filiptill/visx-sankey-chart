@@ -44,17 +44,17 @@ const SankeyChart: React.FC<SankeyChartProps> = ({ data, width, height }) => {
 
     // Rendering the links
     {links.map((link, i) => (
-    <LinkHorizontal
-        key={`link-${i}`}
-        data={{
-        source: { x: (link.source as SankeyNodeExtended).x1, y: ((link.source as SankeyNodeExtended).y0 + (link.source as SankeyNodeExtended).y1) / 2 },
-        target: { x: (link.target as SankeyNodeExtended).x0, y: ((link.target as SankeyNodeExtended).y0 + (link.target as SankeyNodeExtended).y1) / 2 },
-        }}
-        stroke="gray"
-        strokeWidth={Math.max(1, link.width)}
-        fill="none"
-    />
-))}
+        <LinkHorizontal
+            key={`link-${i}`}
+            data={{
+            source: { x: (link.source as SankeyNodeExtended).x1, y: ((link.source as SankeyNodeExtended).y0 + (link.source as SankeyNodeExtended).y1) / 2 },
+            target: { x: (link.target as SankeyNodeExtended).x0, y: ((link.target as SankeyNodeExtended).y0 + (link.target as SankeyNodeExtended).y1) / 2 },
+            }}
+            stroke="gray"
+            strokeWidth={Math.max(0.5, link.width)}
+            fill="none"
+        />
+        ))}
       </Group>
     </svg>
   );
